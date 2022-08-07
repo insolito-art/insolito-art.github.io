@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap"
+      rel="stylesheet"
+    />
     <title>La trahison de la technologie</title>
     <style>
       .trahison {
@@ -20,16 +23,20 @@
         font-size: 8pt;
         font-weight: bold;
       }
+      .footer {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+        text-align: center;
+      }
       body {
         background: whitesmoke;
       }
       h1 {
-        font-family: 'Cedarville Cursive', cursive;
+        font-family: "Cedarville Cursive", cursive;
         text-align: center;
-      }
-      p {
-        font-size: 10pt;
-        font-family: Arial;
       }
     </style>
     <script>
@@ -38,7 +45,7 @@
         nestpas.onreadystatechange = function () {
           if (nestpas.readyState == 4 && nestpas.status == 200) {
             var response = nestpas.responseText;
-            response = response.replace(/(\r\n|\n|\r)/gm," ");
+            response = response.replace(/(\r\n|\n|\r)/gm, " ");
             document.getElementById("trahison").innerText = response;
           }
         };
@@ -54,7 +61,13 @@
     <h1>
       Ceci n'est pas un site internet.
     </h1>
-    <p>insolito-art&copy; - 2022</p>
+    <div class="footer">
+      <p>
+        "La trahison de la technologie" it's an
+        <a href="https://www.instagram.com/insolitoxyz/">insolito</a> project -
+        &copy; 2022
+      </p>
+    </div>
     <script>
       ceciNestPasUnSiteInternet();
     </script>
