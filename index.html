@@ -12,7 +12,7 @@
       .trahison {
         background: khaki;
         margin: 0 auto;
-        padding: 5%;
+        padding: 2%;
         width: 80%;
         height: 50%;
         color: brown;
@@ -34,7 +34,7 @@
         nestpas.onreadystatechange = function () {
           if (nestpas.readyState == 4 && nestpas.status == 200) {
             var response = nestpas.responseText;
-            response.replace(/(\r\n|\n|\r)/gm, "");
+            response.replace(/(\r\n|\n|\r)/gm," ");
             document.getElementById("trahison").innerText = response;
           }
         };
