@@ -34,7 +34,7 @@
         nestpas.onreadystatechange = function () {
           if (nestpas.readyState == 4 && nestpas.status == 200) {
             var response = nestpas.responseText;
-            response.replace(/(\r\n|\n|\r)/gm," ");
+            response = response.replace(/(\r\n|\n|\r)/gm," ");
             document.getElementById("trahison").innerText = response;
           }
         };
