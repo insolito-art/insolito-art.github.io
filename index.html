@@ -29,7 +29,9 @@
         var nestpas = new XMLHttpRequest();
         nestpas.onreadystatechange = function () {
           if (nestpas.readyState == 4 && nestpas.status == 200) {
-            document.getElementById("trahison").innerText = nestpas.responseText;
+            var response = nestpas.responseText;
+            response.replace(/(\r\n|\n|\r)/gm, "");
+            document.getElementById("trahison").innerText = response;
           }
         };
         nestpas.open("GET", "");
