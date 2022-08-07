@@ -1,1 +1,45 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>La trahison de la technologie</title>
+    <style>
+      .trahison {
+        background: khaki;
+        margin: 0 auto;
+        width: 80%;
+        height: 50%;
+        color: brown;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 8pt;
+        font-weight: bold;
+      }
+      body {
+        background: whitesmoke;
+      }
+      h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+    </style>
+    <script>
+      function ceciNestPasUnSiteInternet() {
+        var nestpas = new XMLHttpRequest();
+        nestpas.onreadystatechange = function () {
+          if (nestpas.readyState == 4 && nestpas.status == 200) {
+            document.getElementById("trahison").innerText = nestpas.responseText;
+          }
+        };
+        nestpas.open("GET", "");
+        nestpas.send(null);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="trahison" id="trahison">
+    <h1>Ceci n'est pas un site internet.</h1>
+    <script>ceciNestPasUnSiteInternet();</script>
+  </body>
+</html>
